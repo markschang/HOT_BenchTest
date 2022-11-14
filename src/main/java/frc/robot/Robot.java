@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
     xAxis = stick.getRawAxis(0);  /* axis 0 = left x axis*/
     //motor.set(ControlMode.PercentOutput, xAxis*0.1);
     SmartDashboard.putNumber("Left X", xAxis);
-    SmartDashboard.putNumber("HOT", 67);
+    SmartDashboard.putNumber("HOT", 101);
   }
 
   @Override

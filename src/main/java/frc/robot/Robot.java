@@ -1,5 +1,3 @@
-
-
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -15,34 +13,27 @@ public class Robot extends TimedRobot {
 
   Joystick stick = new Joystick(0);
   double xAxis;
-  TalonFX motor = new TalonFX(2);
+  //TalonFX motor = new TalonFX(2);
 
   @Override
-  public void robotInit() {
-  }
-
+  public void robotInit() {}
 
   @Override
   public void robotPeriodic() {}
 
+  @Override
+  public void autonomousInit() {}
 
   @Override
-  public void autonomousInit() {
-
-  }
-
-  @Override
-  public void autonomousPeriodic() {
-
-  }
+  public void autonomousPeriodic() {}
 
   @Override
   public void teleopInit() {}
 
   @Override
   public void teleopPeriodic() {
-    motor.set(ControlMode.PercentOutput, 0.1);
     xAxis = stick.getRawAxis(0);  /* axis 0 = left x axis*/
+    //motor.set(ControlMode.PercentOutput, xAxis*0.1);
     SmartDashboard.putNumber("Left X", xAxis);
     SmartDashboard.putNumber("HOT", 67);
   }
